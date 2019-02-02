@@ -1,0 +1,85 @@
+{
+  "_from": "@sensenet/default-content-types@^1.1.0",
+  "_id": "@sensenet/default-content-types@1.1.0",
+  "_inBundle": false,
+  "_integrity": "sha512-oL+UIE7M7dqDMOd6G2yWC6456x97BGP6GXtgJZSUCvWGt0QDX/yK4PdbIpSOL/zebnAv9cBX6wkwrclPJNVYNQ==",
+  "_location": "/@sensenet/default-content-types",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "@sensenet/default-content-types@^1.1.0",
+    "name": "@sensenet/default-content-types",
+    "escapedName": "@sensenet%2fdefault-content-types",
+    "scope": "@sensenet",
+    "rawSpec": "^1.1.0",
+    "saveSpec": null,
+    "fetchSpec": "^1.1.0"
+  },
+  "_requiredBy": [
+    "/@sensenet/client-core"
+  ],
+  "_resolved": "https://registry.npmjs.org/@sensenet/default-content-types/-/default-content-types-1.1.0.tgz",
+  "_shasum": "710e8ab6b3bb903def551366a1b46f3acfcd0927",
+  "_spec": "@sensenet/default-content-types@^1.1.0",
+  "_where": "C:\\Projetos\\Outros\\Angular\\hr\\ClientApp\\node_modules\\@sensenet\\client-core",
+  "author": {
+    "name": "Sense/Net",
+    "email": "snteam@sensenet.com",
+    "url": "http://sensenet.com/"
+  },
+  "bugs": {
+    "url": "https://github.com/SenseNet/sn-default-content-types/issues"
+  },
+  "bundleDependencies": false,
+  "config": {
+    "commitizen": {
+      "path": "sensenet-kfi-cz-conventional-changelog"
+    }
+  },
+  "dependencies": {},
+  "deprecated": false,
+  "description": "Default content type definitions for sensenet",
+  "devDependencies": {
+    "rimraf": "^2.6.2",
+    "tslint": "^5.9.1",
+    "tslint-consistent-codestyle": "^1.11.1",
+    "typescript": "^2.7.1"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "homepage": "https://sensenet.com",
+  "keywords": [
+    "sensenet",
+    "ecm",
+    "Content management",
+    "Content types",
+    "Typescript"
+  ],
+  "license": "GPL-2.0",
+  "main": "dist/index.js",
+  "name": "@sensenet/default-content-types",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SenseNet/sn-default-content-types.git"
+  },
+  "scripts": {
+    "build": "tsc",
+    "clean": "rimraf dist",
+    "commit": "git-cz",
+    "lint": "tslint --project tsconfig.json",
+    "prebuild": "npm run lint && npm run clean",
+    "precommit": "npm run build",
+    "prepublishOnly": "npm run build",
+    "publish:development": "npm run build && npm t && npm run typedoc && npm publish --tag development",
+    "test": "npm run build",
+    "typedoc": "typedoc --mode modules --out documentation src --tsconfig tsconfig.json --theme c:/Users/%USERNAME%/AppData/Roaming/npm/node_modules/@sensenet/typedoc-theme/sn-theme"
+  },
+  "typings": "./dist/index.d.ts",
+  "version": "1.1.0"
+}
